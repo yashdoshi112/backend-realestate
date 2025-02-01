@@ -1,5 +1,4 @@
 // knexfile.js
-
 require('dotenv').config();
 
 module.exports = {
@@ -9,7 +8,10 @@ module.exports = {
     migrations: {
       directory: './migrations'
     },
-    ssl: { rejectUnauthorized: false }
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
   },
   development: {
     client: 'pg',
